@@ -1,0 +1,155 @@
+/* Global reset & base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:  Verdana, sans-serif;
+    line-height: 1.5;
+    background-color: #f4f4f4;
+    color: red;
+}
+
+h1 {
+    text-align: center;
+    margin: 30px 0 10px;
+    color: #2c3e50;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+/* Common demo box styling */
+.demo {
+    width: 80%;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 40px 30px;
+    border-radius: 16px;
+    background-color: #fff; /* fallback */
+    /* background properties will be overridden per class */
+}
+
+/* 1. Solid background color */
+.bg-color {
+    background-color: steelblue;
+    color: white;
+}
+
+/* 2. Background image with percentage position (center) */
+.bg-image-center {
+    background-image: url('https://picsum.photos/id/104/300/200'); /* random landscape */
+    background-repeat: no-repeat;
+    background-position: 50% 50%;   /* x% y% - centers the image */
+    background-color: #2c3e50;      /* fallback color */
+    background-size: 200px 150px;   /* make image smaller so we see position clearly */
+    color: white;
+    text-shadow: 1px 1px 0 black;
+}
+
+/* 3. Background image with length position (px) */
+.bg-image-length {
+    background-image: url('https://picsum.photos/id/26/300/200'); /* another image */
+    background-repeat: no-repeat;
+    background-position: 20px 30px;  /* x-pos y-pos in pixels */
+    background-color: #f39c12;
+    background-size: 200px 150px;
+    color: white;
+    text-shadow: 1px 1px 0 black;
+}
+
+/* 4. Repeat horizontally */
+.bg-repeat-x {
+    background-image: url('https://picsum.photos/id/20/60/60'); /* small icon */
+    background-repeat: repeat-x;
+    background-position: left top;
+    background-color: #e67e22;
+    padding-top: 80px;  /* give space for repeated icons */
+}
+
+/* 5. No repeat + keyword position (right bottom) */
+.bg-no-repeat {
+    background-image: url('https://picsum.photos/id/155/120/120');
+    background-repeat: no-repeat;
+    background-position: right bottom;  /* = 100% 100% */
+    background-color: #16a085;
+    background-size: 100px 100px;
+    color: white;
+}
+
+/* 6. Fixed attachment - parallax style */
+.bg-attachment-fixed {
+    background-image: url('https://picsum.photos/id/15/1200/400');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px black;
+    min-height: 350px;
+}
+
+/* 7. Comparison container - two boxes side by side */
+.comparison-container {
+    display: flex;
+    gap: 20px;
+    width: 85%;
+    max-width: 1100px;
+    margin: 30px auto;
+    flex-wrap: wrap;
+}
+
+.half {
+    flex: 1;
+    min-width: 280px;
+    margin: 0;
+}
+
+/* Percentage demo: 25% 25% */
+.bg-percent-demo {
+    background-image: url('https://picsum.photos/id/13/150/150');
+    background-repeat: no-repeat;
+    background-position: 25% 25%;   /* aligns 25% point of image with 25% point of box */
+    background-color: #3498db;
+    background-size: 100px 100px;
+    color: white;
+}
+
+/* Length demo: 50px 50px */
+.bg-px-demo {
+    background-image: url('https://picsum.photos/id/13/150/150');
+    background-repeat: no-repeat;
+    background-position: 50px 50px;   /* fixed offset from top-left */
+    background-color: #9b59b6;
+    background-size: 100px 100px;
+    color: white;
+}
+
+/* Spacer to make scrolling obvious */
+.spacer {
+    height: 600px;
+    background: linear-gradient(white, #ddd);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 700px) {
+    .demo {
+        width: 95%;
+    }
+    .comparison-container {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Background Demo</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="background-style.css">
+</head>
+<body>
+
+    <h1>CSS Background Properties</h1>
+    <p class="intro">Resize your browser window to see how percentages behave differently from fixed lengths.</p>
+
+    <!-- 1. SOLID BACKGROUND COLOR -->
+    <div class="demo bg-color">
+        <h2>1. background-color: steelblue</h2>
+        <p>Just a solid color – no image.</p>
+    </div>
+
+    <!-- 2. BACKGROUND IMAGE + NO REPEAT + PERCENTAGE POSITION (50% 50% = CENTER) -->
+    <div class="demo bg-image-center">
+        <h2>2. background-image + position: 50% 50% (percentages)</h2>
+        <p>The center of the image aligns with the center of the box.</p>
+        <p><strong>Resize the box (or window)</strong> – the image stays centered proportionally.</p>
+    </div>
+
+    <!-- 3. BACKGROUND IMAGE + LENGTH POSITION (20px 30px) -->
+    <div class="demo bg-image-length">
+        <h2>3. background-image + position: 20px 30px (lengths)</h2>
+        <p>The top‑left corner of the image is exactly 20px from left, 30px from top.</p>
+        <p><strong>Resize the box</strong> – the offset does NOT change (fixed px).</p>
+    </div>
+
+    <!-- 4. REPEAT DIFFERENTLY: repeat-x -->
+    <div class="demo bg-repeat-x">
+        <h2>4. background-repeat: repeat-x</h2>
+        <p>Image repeats only horizontally.</p>
+    </div>
+
+    <!-- 5. REPEAT: no-repeat + bottom right -->
+    <div class="demo bg-no-repeat">
+        <h2>5. background-position: right bottom</h2>
+        <p>Same as 100% 100% – image sits at bottom‑right corner.</p>
+    </div>
+
+    <!-- 6. ATTACHMENT: fixed (parallax effect) -->
+    <div class="demo bg-attachment-fixed">
+        <h2>6. background-attachment: fixed</h2>
+        <p>Scroll the page – this background stays still relative to the browser window.</p>
+        <p> Keep scrolling to see it in action.</p>
+    </div>
+
+    <!-- 7. COMPARISON: Two boxes side by side showing % vs px -->
+    <div class="comparison-container">
+        <div class="demo half bg-percent-demo">
+            <h3>Percentages: 25% 25%</h3>
+            <p>Image point at 25% from its left/top aligns with box point at 25% from its left/top.</p>
+            <p>Changes with box size.</p>
+        </div>
+        <div class="demo half bg-px-demo">
+            <h3>Lengths: 50px 50px</h3>
+            <p>Image top‑left corner placed at 50px from left, 50px from top.</p>
+            <p>Fixed offset, does not scale.</p>
+        </div>
+    </div>
+
+    <!-- Extra spacer to see fixed attachment scrolling -->
+    <div class="spacer">
+        <p> Scroll back up to see the "fixed" background stay still. </p>
+    </div>
+
+</body>
+</html>
